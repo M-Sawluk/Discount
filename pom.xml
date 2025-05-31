@@ -11,7 +11,7 @@
 	<groupId>com.interview</groupId>
 	<artifactId>discount</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>discount-service</name>
+	<name>discount</name>
 	<url/>
 	<licenses>
 		<license/>

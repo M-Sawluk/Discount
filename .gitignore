@@ -1,5 +1,5 @@
 HELP.md
-target/
+discount/target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -36,3 +36,4 @@ build/
 /mvnw.cmd
 /.mvn/
 ../.idea
+/target/

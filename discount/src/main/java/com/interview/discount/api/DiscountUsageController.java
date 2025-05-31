@@ -34,7 +34,7 @@ public class DiscountUsageController {
                             responseCode = "201",
                             description = "Discount used successfully",
                             headers = {
-                                    @Header(name = "Location", description = "URI of the newly created discount usage", schema = @io.swagger.v3.oas.annotations.media.Schema(type = "UUID"))
+                                    @Header(name = "Location", description = "URI of the newly created discount usage", schema = @io.swagger.v3.oas.annotations.media.Schema(type = "string"))
                             },
                             content = @Content
                     )

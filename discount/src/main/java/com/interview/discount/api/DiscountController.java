@@ -33,7 +33,7 @@ public class DiscountController {
                             responseCode = "201",
                             description = "Discount created successfully",
                             headers = {
-                                    @Header(name = "Location", description = "URI of the newly created discount", schema = @io.swagger.v3.oas.annotations.media.Schema(type = "UUID"))
+                                    @Header(name = "Location", description = "URI of the newly created discount", schema = @io.swagger.v3.oas.annotations.media.Schema(type = "string"))
                             },
                             content = @Content
                     )

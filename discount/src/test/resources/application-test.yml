@@ -1,0 +1,2 @@
+country-resolver-api:
+    url: http://localhost:${wiremock.server.port}/ip

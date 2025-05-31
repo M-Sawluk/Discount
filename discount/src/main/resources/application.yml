@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: discount
+  jpa:
+    open-in-view: 'false'
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+  h2:
+    console:
+      enabled: 'true'
+      path: /console
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    password: password
+
+country-resolver-api:
+    url: https://api.country.is
+
+server:
+  servlet:
+    context-path: /discount

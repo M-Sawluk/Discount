@@ -1,6 +1,5 @@
 package com.interview.discount.application;
 
-import com.interview.discount.application.factory.DiscountFactory;
 import com.interview.discount.domain.Discount;
 import com.interview.discount.domain.DiscountCode;
 import com.interview.discount.domain.DiscountId;

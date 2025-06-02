@@ -1,4 +1,4 @@
-package com.interview.discount.application.strategy;
+package com.interview.discount.application.usage.strategy;
 
 import com.interview.discount.domain.CountryCode;
 import com.interview.discount.domain.Discount;
@@ -7,8 +7,6 @@ import com.interview.discount.domain.DiscountUsageId;
 import com.interview.discount.domain.DiscountUsageRepository;
 import com.interview.discount.domain.UserEmail;
 import lombok.RequiredArgsConstructor;
-
-import java.util.UUID;
 
 @RequiredArgsConstructor
 public abstract class DiscountUsageStrategy {

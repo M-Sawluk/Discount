@@ -6,12 +6,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
-public class RestConfig {
+public class ApiCountryRestConfig {
 
     @Bean
-    RestTemplate exchangeRestTemplate(RestTemplateBuilder restTemplateBuilder) {
+    RestTemplate apiCountryRestTemplate(RestTemplateBuilder restTemplateBuilder) {
         return restTemplateBuilder
                 .defaultHeader("Accept", "application/json")
+                .errorHandler(new ApiCountryErrorHandler())
                 .build();
     }
 }

@@ -105,6 +105,21 @@ public class DiscountControllerUsageTestIT {
         assertThat(response.getBody()).isEqualTo("User:abc@gmail.com already used discount");
     }
 
+    @Test
+    void shouldThrow400WhenWhenUnknownIpAddress() {
+        // given
+        String discountCode = "CAR";
+        var request = createDiscountUsageRequestHttpEntity(discountCode, "2213.321");
+        restTemplate.postForEntity(HOST + port + DISCOUNTS_USAGES_URL, request, String.class);
+
+        // when
+        ResponseEntity<String> response = restTemplate.postForEntity(HOST + port + DISCOUNTS_USAGES_URL, request, String.class);
+
+        // then
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
+        assertThat(response.getBody()).isEqualTo("Unable to resolve IP address");
+    }
+
     private void createDiscount(String discountCode, String usageType) {
         restTemplate.postForEntity(HOST + port + DISCOUNTS_URL, createDiscountRequest(discountCode, usageType), String.class);
     }

@@ -1,7 +1,7 @@
 package com.interview.discount.application;
 
-import com.interview.discount.application.strategy.NoLimitationUsageStrategy;
-import com.interview.discount.application.strategy.OncePerUserUsageStrategy;
+import com.interview.discount.application.usage.strategy.NoLimitationUsageStrategy;
+import com.interview.discount.application.usage.strategy.OncePerUserUsageStrategy;
 import com.interview.discount.domain.CountryCode;
 import com.interview.discount.domain.Discount;
 import com.interview.discount.domain.DiscountCode;
@@ -11,8 +11,6 @@ import com.interview.discount.domain.UserEmail;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;
-
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor

@@ -1,6 +1,5 @@
-package com.interview.discount.application.factory;
+package com.interview.discount.application;
 
-import com.interview.discount.application.DiscountCreationRequest;
 import com.interview.discount.domain.CountryCode;
 import com.interview.discount.domain.Discount;
 import com.interview.discount.domain.DiscountCode;

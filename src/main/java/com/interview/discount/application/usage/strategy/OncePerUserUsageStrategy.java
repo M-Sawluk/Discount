@@ -1,4 +1,4 @@
-package com.interview.discount.application.strategy;
+package com.interview.discount.application.usage.strategy;
 
 import com.interview.discount.domain.CountryCode;
 import com.interview.discount.domain.Discount;
@@ -7,8 +7,6 @@ import com.interview.discount.domain.DiscountUsageRepository;
 import com.interview.discount.domain.UserEmail;
 import com.interview.discount.domain.exception.DiscountAlreadyUsed;
 import org.springframework.stereotype.Component;
-
-import java.util.UUID;
 
 @Component
 public class OncePerUserUsageStrategy extends DiscountUsageStrategy {

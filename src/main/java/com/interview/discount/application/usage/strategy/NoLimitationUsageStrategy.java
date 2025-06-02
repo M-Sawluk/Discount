@@ -1,4 +1,4 @@
-package com.interview.discount.application.strategy;
+package com.interview.discount.application.usage.strategy;
 
 import com.interview.discount.domain.CountryCode;
 import com.interview.discount.domain.Discount;

@@ -5,6 +5,7 @@ import com.interview.discount.domain.exception.DiscountAlreadyUsed;
 import com.interview.discount.domain.exception.DiscountNotEntitledInUserCountryException;
 import com.interview.discount.domain.exception.DiscountNotFoundException;
 import com.interview.discount.domain.exception.DiscountUsageLimitReachedException;
+import com.interview.discount.domain.exception.NonResolvableIpException;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.core.Ordered;
@@ -69,6 +70,12 @@ public class ExceptionHandlerControllerAdvice {
 
     @ExceptionHandler({DiscountUsageLimitReachedException.class})
     public ResponseEntity<Object> handleDiscountUsageLimitReachedException(DiscountUsageLimitReachedException exception) {
+        return ResponseEntity.badRequest()
+                .body(exception.getMessage());
+    }
+
+    @ExceptionHandler({NonResolvableIpException.class})
+    public ResponseEntity<Object> handleNonResolvableIpException(NonResolvableIpException exception) {
         return ResponseEntity.badRequest()
                 .body(exception.getMessage());
     }

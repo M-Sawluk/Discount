@@ -5,7 +5,6 @@ import com.interview.discount.application.DiscountCreationService;
 import com.interview.discount.domain.DiscountId;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.headers.Header;
-import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -34,8 +33,7 @@ public class DiscountController {
                             description = "Discount created successfully",
                             headers = {
                                     @Header(name = "Location", description = "URI of the newly created discount", schema = @io.swagger.v3.oas.annotations.media.Schema(type = "string"))
-                            },
-                            content = @Content
+                            }
                     )
             }
     )

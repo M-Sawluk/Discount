@@ -11,9 +11,9 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.Version;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -45,6 +45,8 @@ public class Discount {
     @NotNull
     @Enumerated(EnumType.STRING)
     private DiscountUsageType usageType;
+    @Version
+    private Long version;
 
     public Discount(DiscountCode code, int maxUsageCount, CountryCode entitledCountry, DiscountUsageType usageType, Clock clock) {
         this.id = new DiscountId(UUID.randomUUID());
